@@ -1,0 +1,148 @@
+{
+    "Title": "Freelance Detective",
+    "Credits": "Created by Jayden Ramirez (jararami@ucsc.edu).",
+    "InitialLocation": "Office",
+    "Items": {
+        "ToyPress": {
+            "Location": "Convenience Store",
+            "Class": "KeyItem"
+        },
+        "MissingKnife": {
+            "Location": "Victim's Apartment",
+            "Class": "KeyItem"
+        },
+        "DeletedNewsData": {
+            "Location": "News Company",
+            "Class": "TriggerItem"
+        }
+    },
+
+    "Locations": {
+        "Office": {
+            "Body": "You are a Freelance Detective. You have taken on a number of cases throughout the years, all have hardened you into the cold yet suave veteran you have become. You reminisce on the cases that stand out in your scarred mind... The case of the missing Teddy Bear, The case of what make's that ghastly noise in the truck, and the case of who hit who between Sally and Little Jimmy, that cold case still haunts you to this day. However, today you face something new... Your first ever Murder Case!!! Well... attempted murder, but hey, it's new.",
+            "Choices": [
+                {
+                    "Text": "Main Street",
+                    "Target": "Main Street"
+                },
+                {
+                    "Text": "Victim's Apartment",
+                    "Target": "Victim's Apartment"
+                },
+                {
+                    "Text": "Local Mob Hideout",
+                    "Target": "Local Mob Hideout"
+                }
+            ]
+        },
+        "Victim's Apartment": {
+            "Body": "You were notified of where the location was, and once you entered, a new world of horror opened up to you. The Apartment was well kept and neatly tidied. Various antiques line up the coffee table, pictures of family forever frozen in time line up the walls, nothing seems to be shifted out of the ordinary, nor anything substantial taken. There doesn't really seem to be anything noteworthy nor a helpful clue to help out with the case. Perhaps the chalk outline of a body and the bloodstain in the center and what looks to be a knife wedged to the floor could be worth checking out... nah.",
+            "Choices": [
+                {
+                    "Text": "Office",
+                    "Target": "Office"
+                }
+            ]
+        },
+        "Prison": {
+            "Body": "Finale Offdeedge, possibly the only sane person in a mad city. Her 20 cups a coffee intake and threatening any living being for the slight little annoyance of disrupting her live reporting on the news is the only display of saving grace that there is still hope in this city. Now here she stands, accused of being the number 1 suspect, claiming that she was never in the apartment at the time of the murder, despite her being seen with a goon for the local mob. Tragic for the system to be so blind for her innocence."
+        },
+        "Main Street": {
+            "Body": "Ah, like walking down memory lane. This city is all bright lights and beauty on the outside, but then you see the ugly truth on the inside. The street's are maintained and clean at least once a week. Police have a heavy maintence over the local gangs and mobs. There's a perfect mixture of Mom and Pop shops and mega stores. A passerby attempted to throw an empty can and missed, leaving it there next to the trash bin... This city is beyond saving. Ahead are two familiar places I pride myself in surviving, Gale's Diner, and Value Market.",
+            "Choices": [
+                {
+                    "Text": "Office",
+                    "Target": "Office"
+                },
+                {
+                    "Text": "Convenience Store",
+                    "Target": "Convenience Store"
+                },
+                {
+                    "Text": "Diner",
+                    "Target": "Diner"
+                }
+            ]
+        },
+        "Convenience Store": {
+            "Body": "The Value Market. Penny-pinching thieves always offering enough the best deals to help you save in a stable economy. The cashier greets you with a cheerful Hi! Not even a Good Morning... animals. It seems there's a sale on costumes, including props like a Toy Press Badge.",
+            "Choices": [
+                {
+                    "Text": "Main Street",
+                    "Target": "Main Street"
+                }
+            ]
+        },
+        "Diner": {
+            "Body": "Gale's Diner, a restraunt with such a homely and warm aroma it makes you sick to your stomach. The food is mouthwatering, the staff are kind and quick, and everyone knows how to keep their manners. You order a coffee, black, just like the soul of the city.",
+            "Choices": [
+                {
+                    "Text": "Main Street",
+                    "Target": "Main Street"
+                }
+            ]
+        },
+        "Local Mob Hideout": {
+            "Body": "The Percheli Mob, just one of the many parasites leeching off the good of this city. You've already made yourself known as a Freelance Detective, even going so far to legally change your name to the occupation, so the guards outside already recognize your stance on the law, preventing you from entering and not even bothering to listen to you.",
+            "Choices": [
+                {
+                    "Text": "Office",
+                    "Target": "Office"
+                },
+                {
+                    "Text": "Suspicious Alleyway",
+                    "Target": "Suspicious Alleyway"
+                },
+                {
+                    "Text": "News Company",
+                    "Target": "News Company"
+                },
+                {
+                    "Text": "Inside Mob Hideout",
+                    "Target": "Inside Mob Hideout",
+                    "Requires": "DeletedNewsData"
+                }
+            ]
+        },
+        "News Company": {
+            "Body": "The News, spreader of truth's and outlandish tales of privacy breaches that should remain private disgusting. Unfortunately, they aren't looking for any official enforcers of the law to get the first scoop from. Fortunately, you aren't one, and they tell you to get lost since you aren't an employee either.",
+            "Scene": "DeleteNewsScene",
+            "Choices": [
+                {
+                    "Text": "File Cabinet",
+                    "Target": "File Cabinet"
+                }
+            ]
+        },
+        "File Cabinet": {
+            "Body": "It's a good thing that this convenient cabinet labeled Mob Bribes contains the very file you were told to make disappear, but this doesn't seem very lawful to you, should we rid the document?",
+            "Choices": [
+                {
+                    "Text": "Office",
+                    "Target": "Office"
+                }
+            ]
+        },
+        "Inside Mob Hideout": {
+            "Body": "Well, having a bag over your head and being tied to a chair is progress. A voice then speaks, the guy you are looking for is Sam Max, he's an idiot who's more trouble than he's worth, this isn't associated with us. Sounds reasonable.",
+            "Choices": [
+                {
+                    "Text": "Accuse Sam Max",
+                    "Target": "Case Closed!"
+                },
+                {
+                    "Text": "Accuse Faline Offdeedge",
+                    "Target": "Case Closed?"
+                }
+            ]
+        },
+        "Case Closed!": {
+            "Body": "You've done it. You've solved the murder of a completely different case, with your case still on going, but hey, that's the life of a Freelance Dective.",
+            "Choices": []
+        },
+        "Case Closed?": {
+            "Body": "For some reason, you were deadset on the wife being the killer, and wouldn't you know it, you were completely wrong. By the time of her execution, it turned out the husband died accidentally falling with the knife handle first hitting his chest and causing heart failure, and the blood was actually tomato juice he also fell on. Welp, you can't get them all right as a Freelance Detective!",
+            "Choices": []
+        }
+    }
+}
