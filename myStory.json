@@ -95,12 +95,22 @@
                 },
                 {
                     "Text": "News Company",
-                    "Target": "News Company"
+                    "Target": "News Company",
+                    "Requires": "ToyPress"
                 },
                 {
                     "Text": "Inside Mob Hideout",
                     "Target": "Inside Mob Hideout",
                     "Requires": "DeletedNewsData"
+                }
+            ]
+        },
+        "Suspicious Alleyway": {
+            "Body": "A sharp whistle lures your attention, one of the mob's goon. He tells you if you want a visit, you will have to delete some incriminating evidence housed by the local news company, the same one Faline Offdeedge works at.",
+            "Choices": [
+                {
+                    "Text": "Local Mob Hideout",
+                    "Target": "Local Mob Hideout"
                 }
             ]
         },
@@ -137,11 +147,11 @@
             ]
         },
         "Case Closed!": {
-            "Body": "You've done it. You've solved the murder of a completely different case, with your case still on going, but hey, that's the life of a Freelance Dective.",
+            "Body": "You've done it. You've solved the murder of a completely different case, with your case still on going, but hey, that's the life of a Freelance Dective. Made by Jayden Ramirez(jararami@ucsc.edu)",
             "Choices": []
         },
         "Case Closed?": {
-            "Body": "For some reason, you were deadset on the wife being the killer, and wouldn't you know it, you were completely wrong. By the time of her execution, it turned out the husband died accidentally falling with the knife handle first hitting his chest and causing heart failure, and the blood was actually tomato juice he also fell on. Welp, you can't get them all right as a Freelance Detective!",
+            "Body": "For some reason, you were deadset on the wife being the killer, and wouldn't you know it, you were completely wrong. By the time of her execution, it turned out the husband died accidentally falling with the knife handle first hitting his chest and causing heart failure, and the blood was actually tomato juice he also fell on. Welp, you can't get them all right as a Freelance Detective! Made by Jayden Ramirez(jararami@ucsc.edu)",
             "Choices": []
         }
     }

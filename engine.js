@@ -8,7 +8,7 @@ class Engine {
 
         this.firstSceneClass = firstSceneClass;
         this.storyDataUrl = storyDataUrl;
-
+        this.inventory = [];
         this.header = document.body.appendChild(document.createElement("h1"));
         this.output = document.body.appendChild(document.createElement("div"));
         this.actionsContainer = document.body.appendChild(document.createElement("div"));
@@ -24,12 +24,13 @@ class Engine {
     }
 
     gotoScene(sceneClass, data) {
-        this.scene = new sceneClass(this);
-        this.scene.create(data);
         if (typeof sceneClass === "string") {
             if (sceneClass === "DeleteNewsScene") sceneClass = DeleteNewsScene;
+            if (sceneClass === "InsideMobHideoutScene") sceneClass = InsideMobHideoutScene;
+            if (sceneClass === "End") sceneClass = End;
         }
-
+        this.scene = new sceneClass(this);
+        this.scene.create(data);
     }
 
     addChoice(action, data) {
