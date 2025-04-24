@@ -38,6 +38,7 @@ class Start extends Scene {
         //console.log([query])
         //console.log(person.name)
         //console.log(person.pets[0])
+        //console.log(this.engine.inventory);
         console.log(this.engine.storyData);
         console.log(this.engine.storyData.Locations);
         // this.engine.setTitle("Title goes here"); // TODO: replace this text using this.engine.storyData to find the story title
@@ -78,6 +79,7 @@ class Location extends Scene {
           if (itemData.Location === key && !this.engine.inventory.includes(itemName)) {
             this.engine.show(`You found a <b>${itemName}</b>.`);
             this.engine.addChoice(`Pick up ${itemName}`, {pickUp: itemName});
+            console.log(this.engine.inventory);
           }
         }
         if(locationData.Choices && locationData.Choices.length > 0) {
@@ -90,7 +92,7 @@ class Location extends Scene {
                 }
             }
         } else {
-            this.engine.addChoice("The end.");
+            this.engine.addChoice("The end.", {end: true});
         }
     }
     handleChoice(choice) {
@@ -103,8 +105,8 @@ class Location extends Scene {
       } else if (choice) {
         this.engine.show("&gt; " + choice.Text);
         this.engine.gotoScene(Location, choice.Target);
-      } else {
-        this.engine.gotoScene(End);
+      } else if (choice.end){
+        this.engine.gotoScene("End");
       }
     }
   }
@@ -135,8 +137,10 @@ class Location extends Scene {
     create() {
       this.engine.setTitle("Welp, looks like we cracked the case!");
       this.engine.show("Pick the OBVIOUS suspect.");
+      console.log(this.engine.inventory);
       
       if (this.engine.inventory.includes("MissingKnife")) {
+        console.log(this.engine.inventory);
         this.engine.addChoice("Accuse Sam Max", {Target: "Case Closed!"});
       }
       

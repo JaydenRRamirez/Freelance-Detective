@@ -135,24 +135,31 @@
         },
         "Inside Mob Hideout": {
             "Body": "Well, having a bag over your head and being tied to a chair is progress. A voice then speaks, the guy you are looking for is Sam Max, he's an idiot who's more trouble than he's worth, this isn't associated with us. Sounds reasonable.",
+            "Scene": "InsideMobHideoutScene",
             "Choices": [
-                {
-                    "Text": "Accuse Sam Max",
-                    "Target": "Case Closed!"
-                },
-                {
-                    "Text": "Accuse Faline Offdeedge",
-                    "Target": "Case Closed?"
-                }
             ]
         },
         "Case Closed!": {
-            "Body": "You've done it. You've solved the murder of a completely different case, with your case still on going, but hey, that's the life of a Freelance Dective. Made by Jayden Ramirez(jararami@ucsc.edu)",
-            "Choices": []
+            "Body": "You've done it. You've solved the murder of a completely different case, with your case still on going, but hey, that's the life of a Freelance Dective.",
+            "Choices": [
+                {
+                    "Text": "Credits",
+                    "Target": "End"
+                }
+            ]
         },
         "Case Closed?": {
-            "Body": "For some reason, you were deadset on the wife being the killer, and wouldn't you know it, you were completely wrong. By the time of her execution, it turned out the husband died accidentally falling with the knife handle first hitting his chest and causing heart failure, and the blood was actually tomato juice he also fell on. Welp, you can't get them all right as a Freelance Detective! Made by Jayden Ramirez(jararami@ucsc.edu)",
-            "Choices": []
+            "Body": "For some reason, you were deadset on the wife being the killer, and wouldn't you know it, you were completely wrong. By the time of her execution, it turned out the husband died accidentally falling with the knife handle first hitting his chest and causing heart failure, and the blood was actually tomato juice he also fell on. Welp, you can't get them all right as a Freelance Detective!",
+            "Choices": [
+                {
+                    "Text": "Credits",
+                    "Target": "End"
+                }
+            ]
+        },
+        "End": {
+            "Body": "",
+            "Scene": "End"
         }
     }
 }
